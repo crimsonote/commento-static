@@ -608,9 +608,9 @@
 
 
   var sortPolicyNames = {
-    "score-desc": "Upvotes",
-    "creationdate-desc": "Newest",
-    "creationdate-asc": "Oldest",
+    "score-desc": "Upvotes赞同",
+    "creationdate-desc": "Newest最新",
+    "creationdate-asc": "Oldest最旧",
   };
 
 
@@ -688,7 +688,7 @@
 
     if (isLocked || isFrozen) {
       if (isAuthenticated || chosenAnonymous) {
-        append(mainArea, messageCreate("This thread is locked. You cannot add new comments."));
+        append(mainArea, messageCreate("This thread is locked. You cannot add new comments.很抱歉，该页面评论区已被锁定，你无法添加新的评论。"));
         remove($(ID_LOGIN));
       } else {
         append(mainArea, login);
@@ -969,12 +969,12 @@
       name.id = ID_NAME + comment.commentHex;
 
       collapse.title = "Collapse children";
-      upvote.title = "Upvote";
-      downvote.title = "Downvote";
-      edit.title = "Edit";
-      reply.title = "Reply";
-      approve.title = "Approve";
-      remove.title = "Remove";
+      upvote.title = "Upvote赞成";
+      downvote.title = "Downvote反对";
+      edit.title = "Edit编辑";
+      reply.title = "Reply回复";
+      approve.title = "Approve批准评论";
+      remove.title = "Remove删除评论";
       if (stickyCommentHex === comment.commentHex) {
         if (isModerator) {
           sticky.title = "Unsticky";
@@ -1864,7 +1864,7 @@
       order = ["name", "website", "password"];
       fid = [ID_LOGIN_BOX_NAME_INPUT, ID_LOGIN_BOX_WEBSITE_INPUT, ID_LOGIN_BOX_PASSWORD_INPUT];
       type = ["text", "text", "password"];
-      placeholder = ["Real Name.真实姓名", "Website 网站(Optional可选)", "Password"];
+      placeholder = ["Real Name.真实姓名", "Website 网站(Optional可选)", "Password 密码"];
     } else {
       order = ["password"];
       fid = [ID_LOGIN_BOX_PASSWORD_INPUT];
@@ -2009,9 +2009,9 @@
     classAdd(modTools, "mod-tools");
 
     if (isLocked) {
-      lock.innerHTML = "Unlock Thread";
+      lock.innerHTML = "Unlock Thread 解锁";
     } else {
-      lock.innerHTML = "Lock Thread";
+      lock.innerHTML = "Lock Thread 锁定";
     }
 
     onclick(lock, global.threadLockToggle);
