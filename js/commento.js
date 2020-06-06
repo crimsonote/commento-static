@@ -1864,16 +1864,16 @@
       order = ["name", "website", "password"];
       fid = [ID_LOGIN_BOX_NAME_INPUT, ID_LOGIN_BOX_WEBSITE_INPUT, ID_LOGIN_BOX_PASSWORD_INPUT];
       type = ["text", "text", "password"];
-      placeholder = ["Real Name", "Website (Optional)", "Password"];
+      placeholder = ["Real Name.真实姓名", "Website 网站(Optional可选)", "Password"];
     } else {
       order = ["password"];
       fid = [ID_LOGIN_BOX_PASSWORD_INPUT];
       type = ["password"];
-      placeholder = ["Password"];
+      placeholder = ["Password 密码"];
     }
 
     if (popupBoxType === "signup") {
-      subtitle.innerText = "Finish the rest of your profile to complete."
+      subtitle.innerText = "Finish the rest of your profile to complete.填写资料的其他部分以完成注册。"
     } else {
       subtitle.innerText = "Enter your password to log in.输入密码登陆。"
     }
