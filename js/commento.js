@@ -1185,7 +1185,7 @@
 
 
   global.commentDelete = function(commentHex) {
-    if (!confirm("Are you sure you want to delete this comment?")) {
+    if (!confirm("Are you sure you want to delete this comment?确认删除此评论？")) {
       return;
     }
 
@@ -1203,7 +1203,7 @@
       }
 
       var text = $(ID_TEXT + commentHex);
-      text.innerText = "[deleted]";
+      text.innerText = "[deleted_已删除]";
     });
   }
 
@@ -1652,7 +1652,7 @@
     loginLink.innerText = "Don't have an account? Sign up.还没有账户？注册。";
     emailSubtitle.innerText = "Login with your email address.使用您的电子邮件地址登录";
     emailButton.innerText = "Continue 继续";
-    oauthSubtitle.innerText = "Proceed with social login";
+    oauthSubtitle.innerText = "Proceed with social login.使用社交帐号登陆";
     ssoSubtitle.innerText = "Proceed with " + parent.location.host + " authentication";
 
     onclick(emailButton, global.passwordAsk, id);
